@@ -14,6 +14,15 @@ dispatcher.onGet("/api", function(req, res) {
 	res.end(JSON.stringify(insultObject));
 })
 
+dispatcher.onGet("/api/slack", function(req, res) {
+	res.writeHead(200, {'Content-Type': 'application/json'});
+	var slackInsultObject = { 
+		"response_type": "in_channel",
+		"text": insult()
+	};
+	res.end(JSON.stringify(slackInsultObject));
+})
+
 function handleRequest(request, response) {
 	try {
 		console.log(request.url);
