@@ -4,6 +4,11 @@ var dispatcher = require('httpdispatcher');
 const PORT=8080;
 
 dispatcher.onGet("/", function(req, res) {
+	res.writeHead(200, {'Content-Type': 'text/html'});
+	res.end(insult());
+})
+
+dispatcher.onGet("/api", function(req, res) {
 	res.writeHead(200, {'Content-Type': 'application/json'});
 	var insultObject = { "insult": insult() };
 	res.end(JSON.stringify(insultObject));
