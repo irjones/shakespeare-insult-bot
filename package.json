@@ -5,6 +5,10 @@
     "type": "git",
     "url": "https://github.com/irjones/shakespeare-insult-bot.git"
   },
+  "main": "insultBot.js",
+  "scripts": {
+    "start": "node insultBot.js"
+  },
   "dependencies": {
     "http": "0.0.0",
     "httpdispatcher": "^1.0.0"

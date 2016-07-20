@@ -20,9 +20,7 @@ function handleRequest(request, response) {
 
 var server = http.createServer(handleRequest);
 
-server.listen(PORT, function() {
-	console.log("Server listening on: http:localhost:%s", PORT);
-});
+server.listen(process.env.PORT);
 
 // insult logic
 var insultArray1 = "artless bawdy beslubbering bootless churlish cockered clouted craven currish dankish dissembling droning errant fawning fobbing froward frothy gleeking goatish gorbellied impretinent infectious jarring loggerheaded lumpish mammering mangled mewling paunchy pribbling puking puny qualling rank reeky roguish ruttish saucy spleeny spongy surly tottering unmuzzled vain venomed villainous warped wayward weedy yeasty".split(" ");
